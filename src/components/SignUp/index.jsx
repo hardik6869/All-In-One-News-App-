@@ -2,12 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
+import './signUp.css'
 
 const Signup = () => {
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
     email: "",
+    number: "",
     password: "",
   });
   const [error, setError] = useState("");
@@ -36,13 +38,10 @@ const Signup = () => {
   };
 
   return (
-    <div className={styles.signup_container}>
-      <div className={styles.signup_form_container}>
-        <h1 className="text-center my-3"> Sing In </h1>
-
-        <div className={styles.right}>
+      <div className="container my-5 d-flex justify-content-center">
+        <div className="col-md-5 main_box">
           <form className={styles.form_container} onSubmit={handleSubmit}>
-            <h1>Create Account</h1>
+          <h2 className="text-center my-3 text-white"> Sing Up </h2>
             <input
               type="text"
               placeholder="First Name"
@@ -70,6 +69,15 @@ const Signup = () => {
               required
               className={styles.input}
             />
+               <input
+              type="text"
+              placeholder="Mobile Number"
+              name="number"
+              onChange={handleChange}
+              value={data.number}
+              required
+              className={styles.input}
+            />
             <input
               type="password"
               placeholder="Password"
@@ -80,18 +88,17 @@ const Signup = () => {
               className={styles.input}
             />
             {error && <div className={styles.error_msg}>{error}</div>}
-            <button type="submit" className={styles.green_btn}>
+            <button type="submit" className="btn btn-success font-weight-bold mt-3 px-4">
               Sing Up
             </button>
           </form>
           <Link to="/login">
-            <a type="button" className="text-primary my-3">
+            <a type="button" className="text-primary my-3 font-weight-bold">
               Sing in here !
             </a>
           </Link>
         </div>
-      </div>
-    </div>
+        </div>
   );
 };
 

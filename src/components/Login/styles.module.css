@@ -1,7 +1,6 @@
 .login_container {
 	width: 100%;
 	min-height: 100vh;
-	background-color: #f5f5f5;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -11,7 +10,7 @@
 	width: 900px;
 	height: 500px;
 	display: flex;
-	border-radius: 10px;
+	border-radius: 0px 0px 50px 0px;
 	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
 		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
@@ -67,8 +66,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: #5da1ce;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-radius: 50px 0px;
 }
 
 .right h1 {
