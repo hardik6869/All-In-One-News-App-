@@ -1,6 +1,5 @@
 import React from "react";
 import UserLayout from "../Navigation/UserLayout";
-
 function Home() {
   return (
     <UserLayout>
