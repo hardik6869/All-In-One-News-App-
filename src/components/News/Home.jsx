@@ -1,9 +1,10 @@
 import React from "react";
 import UserLayout from "../Navigation/UserLayout";
+import News from "./News";
 function Home() {
   return (
     <UserLayout>
-      <h1> Hello </h1>
+      <News />
     </UserLayout>
   );
 }

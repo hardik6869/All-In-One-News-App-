@@ -19,6 +19,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
             {!isLogin ? (
               <>
+                <NavLink to="/visitoruser">VisitorUser</NavLink>
                 <NavLink to="/login">Login</NavLink>
                 <NavLink to="/signup">Signup</NavLink>
               </>

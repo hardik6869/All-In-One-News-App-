@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/actions";
@@ -77,6 +77,13 @@ const Login = () => {
               Sing Up
             </button>
           </Link>
+          <NavLink
+            className="nav-link mt-5 font-weight-bold"
+            style={{ color: "white" }}
+            to="/"
+          >
+            <i class="fa-solid fa-arrow-left-long"></i> Back to Home
+          </NavLink>
         </div>
       </div>
     </div>

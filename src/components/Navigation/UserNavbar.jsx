@@ -7,7 +7,10 @@ const UserNavbar = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-secondary ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-primary ">
+        <span className="mr-3 text-xl font-weight-bold shadow-lg rounded">
+          All In One News App
+        </span>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,38 +24,34 @@ const UserNavbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <i class="fa-solid fa-house-chimney"></i>
-              <NavLink className="navbar-brand nav-link" to="/home">
-                Home
+            <li className="nav-item active shadow mx-2">
+              <NavLink className="text-light nav-link" to="/home">
+                <i class="fa-solid fa-house-chimney"></i> Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <i class="fa fa-signs-post"></i>
-              <NavLink className="navbar-brand nav-link" to="/post">
-                Posted
+            <li className="nav-item shadow mx-2">
+              <NavLink className="text-light nav-link" to="/post">
+                <i class="fa fa-signs-post"></i> Posted
               </NavLink>
             </li>
-            <li className="nav-item">
-              <i class="fa-regular fa-newspaper"></i>
-              <NavLink className="navbar-brand nav-link" to="/addnews">
-                AddNews
+            <li className="nav-item shadow mx-2">
+              <NavLink className="text-light nav-link" to="/addnews">
+                <i class="fa-regular fa-newspaper"></i> AddNews
               </NavLink>
             </li>
-            <li className="nav-item">
-              <i class="fa-regular fa-address-card"></i>
-              <NavLink className="navbar-brand nav-link" to="/userprofile">
-                UserProfile
+            <li className="nav-item shadow mx-2 ">
+              <NavLink className="nav-link text-light" to="/userprofile">
+                <i class="fa-regular fa-address-card"></i> UserProfile
               </NavLink>
             </li>
           </ul>
-          <i class="fa-solid fa-right-from-bracket"></i>
+
           <NavLink
-            className="navbar-brand pl-1"
+            className="shadow px-2 pl-1 text-light"
             to="/"
             onClick={() => LogoutHandler()}
           >
-            Logout
+            <i className="fa-solid fa-right-from-bracket"></i> Logout
           </NavLink>
         </div>
       </nav>

@@ -41,7 +41,9 @@ const Signup = () => {
     <div className="container my-5 d-flex justify-content-center">
       <div className="col-md-5 main_box">
         <form className={styles.form_container} onSubmit={handleSubmit}>
-          <h2 className="text-center my-3 text-white"> Sing Up </h2>
+          <h2 className="text-center my-3" style={{ color: "#5da1ce" }}>
+            Sing Up
+          </h2>
           <input
             type="text"
             placeholder="First Name"
@@ -90,15 +92,18 @@ const Signup = () => {
           {error && <div className={styles.error_msg}>{error}</div>}
           <button
             type="submit"
-            className="btn btn-success font-weight-bold mt-3 px-4"
+            style={{ backgroundColor: "#5da1ce" }}
+            className="btn text-white font-weight-bold mt-3 px-4"
           >
             Sing Up
           </button>
         </form>
-        <Link to="/login">
-          <a type="button" className="text-primary my-3 font-weight-bold">
-            Sing in here !
-          </a>
+        <Link
+          to="/login"
+          className="nav-link mt-2 font-weight-bold"
+          style={{ color: "#5da1ce" }}
+        >
+          Sign in here !
         </Link>
       </div>
     </div>
