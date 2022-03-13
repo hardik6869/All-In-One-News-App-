@@ -1,27 +1,39 @@
-// import React from 'react'
-// import { Container } from 'react-bootstrap';
-// import { Nav } from 'react-bootstrap';
-// const Navbar = () => {
-//   return (
-//     <>
-//               <Navbar collapseOnSelect fixed="top" expand="sm">
-//         <Container>
-//           <Navbar.Toggle aria-controls=" responsive-navbar-nav" />
-//           <Navbar.Collapse id="responsive-navbar-nav">
-//             <Nav>
-//               <Nav.Link to="/">Home</Nav.Link>
-//               <Nav.Link to="/post">Posted</Nav.Link>
-//               <Nav.Link to="/addnews">Add News</Nav.Link>
-//               <Nav.Link to="/profile">Profile</Nav.Link>
-//               <button className="float-right" onClick={handleLogout}>
-//                 Logout
-//               </button>
-//             </Nav>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>
-//     </>
-//   )
-// }
+import React from "react";
+import { AppBar, Toolbar, Container } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../store/actions";
 
-// export default Navbar
+const Navbar = () => {
+  const { isLogin } = useSelector((state) => state.LoginOut.isLogin);
+  const dispatch = useDispatch();
+  const LogoutHandler = () => {
+    dispatch(logout());
+    localStorage.removeItem("token");
+  };
+  return (
+    <>
+      <Container fixed>
+        <AppBar position="static">
+          <Toolbar>
+            <NavLink to="/">Home</NavLink>
+            {!isLogin ? (
+              <>
+                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/signup">Signup</NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink to="/signup" to="/" onClick={() => LogoutHandler()}>
+                  Logout
+                </NavLink>
+              </>
+            )}
+          </Toolbar>
+        </AppBar>
+      </Container>
+    </>
+  );
+};
+
+export default Navbar;

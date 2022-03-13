@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import UserLayout from "../Navigation/UserLayout";
 
 function userProfile() {
   return (
-    <h1> userProfile</h1>
-  )
+    <UserLayout>
+      <h1> userProfile</h1>
+    </UserLayout>
+  );
 }
 
-export default userProfile
+export default userProfile;

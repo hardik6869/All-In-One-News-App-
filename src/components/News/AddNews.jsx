@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
+import UserLayout from "../Navigation/UserLayout";
 
 function AddNews() {
   return (
-    
-    <h1> AddNews </h1>
-  )
+    <UserLayout>
+      <h1> AddNews </h1>
+    </UserLayout>
+  );
 }
 
-export default AddNews
+export default AddNews;

@@ -3,21 +3,20 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Main from "./components/Main";
 import Signup from "./components/SignUp";
 import Login from "./components/Login";
-import Error from "./components/Error/Error";
 import Home from "./components/News/Home";
 import Post from "./components/News/Post";
 import AddNews from "./components/News/AddNews";
 import UserProfile from "./components/News/UserProfile";
 
 function App() {
-  const user = localStorage.getItem("token");
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    window.location.reload();
-  };
+  // const isLogin = localStorage.getItem("token");
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token");
+  //   window.location.reload();
+  // };
   return (
     <>
-      {user ? (
+      {/* {user ? (
         <>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to="/" className="navbar-brand">
@@ -57,35 +56,33 @@ function App() {
                 </li>
               </ul>
               <NavLink
-                // to="/login"
-                // className={classes.logout}
+                to="/login"
+                className={classes.logout}
                 to="/"
                 onClick={handleLogout}
               >
                 Logout
               </NavLink>
-              {/* <button
+              <button
                 className="float-right bt btn-primary"
                 onClick={handleLogout}
               >
                 Logout
-              </button> */}
+              </button>
             </div>
           </nav>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/post" element={<Post />} />
-            <Route path="/addnews" element={<AddNews />} />
-            <Route path="/Userprofile" element={<UserProfile />} />
-          </Routes>
         </>
-      ) : (
-        <Routes>
-          <Route path="/" exact element={<Login />} />
-          <Route path="/signup" exact element={<Signup />} />
-          <Route path="/login" element={<Navigate replace to="/login" />} />
-        </Routes>
-      )}
+      ) : ( */}
+      <Routes>
+        <Route path="/" exact element={<Login />} />
+        <Route path="/signup" exact element={<Signup />} />
+        <Route path="/login" element={<Navigate replace to="/login" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/post" element={<Post />} />
+        <Route path="/addnews" element={<AddNews />} />
+        <Route path="/userprofile" element={<UserProfile />} />
+      </Routes>
+      {/* )} */}
     </>
   );
 }

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import UserLayout from "../Navigation/UserLayout";
 
 function Post() {
   return (
-    <div>Post</div>
-  )
+    <UserLayout>
+      <div>Post</div>
+    </UserLayout>
+  );
 }
 
-export default Post
+export default Post;
