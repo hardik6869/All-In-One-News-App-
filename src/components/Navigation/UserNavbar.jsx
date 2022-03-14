@@ -9,7 +9,7 @@ const UserNavbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-primary ">
         <span className="mr-3 text-xl font-weight-bold shadow-lg rounded">
-          All In One News App
+          All In One News Place
         </span>
         <button
           className="navbar-toggler"

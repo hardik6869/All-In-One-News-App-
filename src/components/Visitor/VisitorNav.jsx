@@ -9,12 +9,12 @@ const VisitorNav = () => {
         style={{ backgroundColor: "#5da1ce" }}
       >
         <span className="mr-3 text-xl font-weight-bold shadow-lg rounded">
-          All In One News App
+          All In One News Place
         </span>
 
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active shadow mx-2">
-            <NavLink className="navbar-brand nav-link text-light" to="/">
+            <NavLink className="navbar-brand nav-link pl-4 text-light" to="/">
               Home
             </NavLink>
           </li>
