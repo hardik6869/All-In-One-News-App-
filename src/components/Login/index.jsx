@@ -82,11 +82,11 @@ const Login = () => {
             style={{ color: "white" }}
             to="/"
           >
-            <i class="fa-solid fa-arrow-left-long"></i> Back to Home
+            <i className="fa-solid fa-arrow-left-long"></i> Back to Home
           </NavLink>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
