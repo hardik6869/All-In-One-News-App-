@@ -4,8 +4,9 @@ const NewsApi = () => {
   const [value, setValue] = useState("");
   const News = async () => {
     const response = await fetch(
-      "https://newsapi.org/v2/everything?q=keyword&apiKey=cc27756e2cc848d080bb56bba99cc1a7"
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=7f2e1d68bf334485a501a9476a596eec"
     );
+    // "https://newsapi.org/v2/everything?q=keyword&apiKey=cc27756e2cc848d080bb56bba99cc1a7"
     // "https://newsapi.org/v2/everything?q=keyword&apiKey=7f2e1d68bf334485a501a9476a596eec"
     const data = await response.json();
     const NewsData = data.articles.slice(0, 45).map((value, index) => {

@@ -86,7 +86,7 @@ const Login = () => {
           </NavLink>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

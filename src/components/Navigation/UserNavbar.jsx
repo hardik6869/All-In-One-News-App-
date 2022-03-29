@@ -26,22 +26,22 @@ const UserNavbar = () => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active shadow mx-2">
               <NavLink className="text-light nav-link" to="/home">
-                <i class="fa-solid fa-house-chimney"></i> Home
+                <i className="fa-solid fa-house-chimney"></i> Home
               </NavLink>
             </li>
             <li className="nav-item shadow mx-2">
               <NavLink className="text-light nav-link" to="/post">
-                <i class="fa fa-signs-post"></i> Posted
+                <i className="fa fa-signs-post"></i> Posted
               </NavLink>
             </li>
             <li className="nav-item shadow mx-2">
               <NavLink className="text-light nav-link" to="/addnews">
-                <i class="fa-regular fa-newspaper"></i> AddNews
+                <i className="fa-regular fa-newspaper"></i> AddNews
               </NavLink>
             </li>
             <li className="nav-item shadow mx-2 ">
               <NavLink className="nav-link text-light" to="/userprofile">
-                <i class="fa-regular fa-address-card"></i> UserProfile
+                <i className="fa-regular fa-address-card"></i> UserProfile
               </NavLink>
             </li>
           </ul>
