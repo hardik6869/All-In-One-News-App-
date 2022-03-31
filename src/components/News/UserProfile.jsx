@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import UserLayout from "../Navigation/UserLayout";
-import axios from "axios";
 
 const UserProfile = () => {
   useEffect(() => {

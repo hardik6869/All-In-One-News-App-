@@ -14,7 +14,6 @@ const Login = () => {
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
